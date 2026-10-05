@@ -239,34 +239,38 @@ h2 {
   font-size: 1.08rem;
 }
 
-.education-item {
-  display: flex;
-  justify-content: space-between;
+.resume-list {
+  border-top: 1px solid var(--line);
+}
+
+.resume-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 2rem;
   padding: 1.3rem 0;
-  border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 
-.education-item h3 {
+.resume-item h3 {
   margin-bottom: 0.2rem;
   font-size: 1.08rem;
   font-weight: 680;
 }
 
-.education-item h3 a {
+.resume-item h3 a {
   color: var(--text);
 }
 
-.education-item p {
+.resume-item p {
   margin-bottom: 0;
   color: var(--body);
 }
 
-.education-item .date {
-  flex: 0 0 auto;
+.resume-item .date {
   color: var(--muted);
   font-size: 0.92rem;
+  text-align: right;
+  white-space: nowrap;
 }
 
 .site-footer {
@@ -369,10 +373,18 @@ h2 {
     gap: 1rem 1.2rem;
   }
 
-  .education-item,
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .resume-item {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .resume-item .date {
+    text-align: left;
   }
 
   .footer-meta {
